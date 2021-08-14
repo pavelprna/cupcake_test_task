@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import api from "../utils/api"
+import Table from "./Table";
 
 export default function App() {
   const [markets, setMarkets] = useState({})
@@ -28,6 +29,8 @@ export default function App() {
   }, [])
   
   return (
-    <></>
+    <Table markets={initialMarkets}>
+      
+    </Table>
   )
 }
