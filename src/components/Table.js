@@ -2,12 +2,12 @@ export default function Table({ markets,  ...props}) {
   return (
     <table className="table">
       <thead>
-        <tr>
-          <th>pair/market</th>
+        <tr className="table__row">
+          <th className="table__header">pair/market</th>
           {
             markets.map(market => {
               return (
-                <th key={market}>{market}</th>
+                <th className="table__header" key={market.name}>{market.name}</th>
               )
             })
           }
